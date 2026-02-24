@@ -136,6 +136,7 @@ function sidebarBase(): DefaultTheme.SidebarItem[] {
                         { text: "类型系统", link: "类型系统" },
                         { text: "类型运算与工具类型", link: "类型运算与工具类型" },
                         { text: "装饰器", link: "装饰器" },
+                        { text: "语言思考", link: "语言思考" },
                     ] 
                 },
                 {
@@ -224,12 +225,13 @@ function sidebarFramework(): DefaultTheme.SidebarItem[] {
             base: "/note/framework/react/",
             collapsed: false,
             items: [
+                { text: "快速上手", link: "快速上手" },
                 { text: "组件", link: "组件" },
                 { text: "jsx", link: "jsx" },
-                { text: "常用的hook", link: "常用的hook" },
+                { text: "hook", link: "hook" },
                 { text: "hook的实现原理", link: "hook的实现原理" },
                 { text: "组件间的通信", link: "组件间的通信" },
-                { text: "如何使用样式", link: "如何使用样式" },
+                { text: "css样式", link: "css样式" },
             ],
         },
         {
@@ -257,27 +259,29 @@ function sidebarFramework(): DefaultTheme.SidebarItem[] {
 
 function sidebarEngineering(): DefaultTheme.SidebarItem[] {
     return [
-        {
-            text: "工程化",
-            base: "/note/engineering/",
-            items: [{ text: "概述", link: "概述" }],
-        },
-        {
-            text: "webpack",
-            base: "/note/engineering/webpack/",
-            collapsed: false,
-            items: [
-                {
-                    text: "devServer是如何运行的",
-                    link: "devServer是如何运行的",
-                },
-            ],
-        },
+        // {
+        //     text: "工程化",
+        //     base: "/note/engineering/",
+        //     items: [{ text: "概述", link: "概述" }],
+        // },
+        // {
+        //     text: "webpack",
+        //     base: "/note/engineering/webpack/",
+        //     collapsed: false,
+        //     items: [
+        //         {
+        //             text: "devServer是如何运行的",
+        //             link: "devServer是如何运行的",
+        //         },
+        //     ],
+        // },
         {
             text: "vite",
             base: "/note/engineering/vite/",
             collapsed: false,
-            items: [{ text: "vite是如何打包的", link: "vite是如何打包的" }],
+            items: [
+                { text: "快速上手", link: "快速上手" }
+            ],
         },
         {
             text: "测试",
