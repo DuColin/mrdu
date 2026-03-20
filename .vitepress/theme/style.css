@@ -2,6 +2,9 @@
     --vt-c-yellow: #ffc517;
     --vt-c-indigo: #213547;
 
+    --vt-c-text-light-3: rgba(60, 60, 60, .33);
+
+
     --vp-c-text-1: var(--vt-c-indigo);
 
     /* 修改容器样式 */
@@ -15,7 +18,7 @@ body {
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif!important;
 }
 
-/* 导航栏样式 */
+/************** 导航栏样式 *************/
 .VPNavBarMenuLink {
     font-size: 13px !important;
 }
@@ -29,13 +32,13 @@ body {
     font-size: 13px !important;
 }
 
-/* 页面导航样式 */
+/*************** 页面导航样式 ***************/
 .outline-link {
     font-size: 13px !important;
     line-height: 28px;
 }
 
-/* 文档样式 */
+/**************** 文档样式 ******************/
 .vp-doc a {
     text-decoration: none!important;
 }
@@ -44,7 +47,12 @@ body {
     margin: 0px auto;
 }
 
-/* 提示 */
+/******* 无序列表样式 ********/
+.vp-doc ul li::marker {
+    color:  var(--vt-c-text-light-3);
+}
+
+/********* 提示样式 *********/
 .vp-doc .custom-block {
     position: relative;
     padding: 20px 24px 4px 42px;
@@ -68,10 +76,11 @@ body {
 }
 
 
-/** 图片缩放样式 **/
+/************ 图片缩放样式 **************/
 .medium-zoom-overlay {
     z-index: 40;
 }
 .medium-zoom-image--opened {
     z-index: 50;
 }
+

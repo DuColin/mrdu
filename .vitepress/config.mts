@@ -3,7 +3,7 @@ import { defineConfig, type DefaultTheme } from "vitepress";
 export default defineConfig({
     title: "Colin Du's blog",
     description: "A VitePress Site",
-    base: '/mrdu/',
+    base: "/mrdu/",
     themeConfig: {
         nav: nav(),
         sidebar: {
@@ -38,10 +38,10 @@ export default defineConfig({
     },
     markdown: {
         theme: {
-            light: 'github-light',
-            dark: 'github-dark'
-        }
-    }
+            light: "github-light",
+            dark: "github-dark",
+        },
+    },
 });
 
 function nav(): DefaultTheme.NavItem[] {
@@ -105,17 +105,17 @@ function sidebarArticle(): DefaultTheme.SidebarItem[] {
                     text: "大型前端工程的管理方式",
                     link: "大型前端工程的管理方式",
                 },
-                { 
-                    text: "单点登录", 
-                    link: "单点登录" 
+                {
+                    text: "单点登录",
+                    link: "单点登录",
                 },
-                { 
-                    text: "浏览器的兼容性", 
-                    link: "浏览器的兼容性" 
+                {
+                    text: "浏览器的兼容性",
+                    link: "浏览器的兼容性",
                 },
-                { 
-                    text: "如何做好国际化", 
-                    link: "如何做好国际化" 
+                {
+                    text: "如何做好国际化",
+                    link: "如何做好国际化",
                 },
             ],
         },
@@ -131,26 +131,27 @@ function sidebarBase(): DefaultTheme.SidebarItem[] {
             items: [
                 { text: "快速上手", link: "快速上手" },
                 {
-                    text: '语言',
+                    text: "语言",
                     items: [
                         { text: "类型系统", link: "类型系统" },
-                        { text: "类型运算与工具类型", link: "类型运算与工具类型" },
+                        {
+                            text: "类型运算与工具类型",
+                            link: "类型运算与工具类型",
+                        },
                         { text: "装饰器", link: "装饰器" },
                         { text: "语言思考", link: "语言思考" },
-                    ] 
+                    ],
                 },
                 {
-                    text: '编译 & 配置',
-                    items: [
-                        { text: "tsconfig.json", link: "tsconfig" }
-                    ]
-                },       
+                    text: "编译 & 配置",
+                    items: [{ text: "tsconfig.json", link: "tsconfig" }],
+                },
                 {
-                    text: '生态融合',
+                    text: "生态融合",
                     items: [
                         { text: "声明文件", link: "声明文件" },
-                        { text: "js生态集成", link: "js生态集成" }
-                    ]
+                        { text: "js生态集成", link: "js生态集成" },
+                    ],
                 },
             ],
         },
@@ -217,7 +218,7 @@ function sidebarFramework(): DefaultTheme.SidebarItem[] {
             collapsed: false,
             items: [
                 { text: "与vue2的区别", link: "与vue2的区别" },
-                { text: "样式支持", link: "样式支持" }
+                { text: "样式支持", link: "样式支持" },
             ],
         },
         {
@@ -235,12 +236,16 @@ function sidebarFramework(): DefaultTheme.SidebarItem[] {
             ],
         },
         {
-            text: "react路由",
+            text: "React路由",
             base: "/note/framework/react-router/",
             collapsed: false,
-            items: [
-                { text: "快速上手", link: "快速上手" },
-            ],
+            items: [{ text: "快速上手", link: "快速上手" }],
+        },
+        {
+            text: "Redux",
+            base: "/note/framework/redux/",
+            collapsed: false,
+            items: [{ text: "快速上手", link: "快速上手" }],
         },
         {
             text: "electron",
@@ -253,7 +258,7 @@ function sidebarFramework(): DefaultTheme.SidebarItem[] {
             base: "/note/framework/react-native/",
             collapsed: false,
             items: [{ text: "开发环境", link: "开发环境" }],
-        }
+        },
     ];
 }
 
@@ -279,9 +284,7 @@ function sidebarEngineering(): DefaultTheme.SidebarItem[] {
             text: "vite",
             base: "/note/engineering/vite/",
             collapsed: false,
-            items: [
-                { text: "快速上手", link: "快速上手" }
-            ],
+            items: [{ text: "快速上手", link: "快速上手" }],
         },
         {
             text: "测试",
@@ -300,7 +303,7 @@ function sidebarMobile(): DefaultTheme.SidebarItem[] {
             collapsed: false,
             items: [{ text: "移动端开发技术路线", link: "移动端开发技术路线" }],
         },
-    {
+        {
             text: "uni app",
             base: "/note/mobile/uniapp/",
             collapsed: false,
@@ -312,7 +315,7 @@ function sidebarMobile(): DefaultTheme.SidebarItem[] {
             collapsed: false,
             items: [
                 { text: "小程序", link: "小程序" },
-                { text: "微信小程序", link: "微信小程序" }
+                { text: "微信小程序", link: "微信小程序" },
             ],
         },
     ];
