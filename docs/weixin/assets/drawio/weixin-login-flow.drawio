@@ -1,0 +1,89 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="29.6.5">
+  <diagram id="weixin-login-flow" name="微信扫码登录流程">
+    <mxGraphModel dx="1158" dy="731" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;fontSize=12;fontFamily=Arial;" value="用户点击微信登录" vertex="1">
+          <mxGeometry height="60" width="140" x="450" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qrcode-page" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d4e6f1;strokeColor=#3498db;strokeWidth=2;fontSize=12;fontFamily=Arial;" value="跳转到微信登录二维码界面" vertex="1">
+          <mxGeometry height="60" width="180" x="430" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="request-permission" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d4e6f1;strokeColor=#3498db;strokeWidth=2;fontSize=12;fontFamily=Arial;" value="页面向浏览器请求设备应用访问权限" vertex="1">
+          <mxGeometry height="60" width="180" x="190" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="qrcode-login" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fadbd8;strokeColor=#e74c3c;strokeWidth=2;fontSize=12;fontFamily=Arial;" value="用户扫码登录" vertex="1">
+          <mxGeometry height="60" width="140" x="450" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="permission-check" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fdebd0;strokeColor=#f39c12;strokeWidth=2;fontSize=11;fontFamily=Arial;" value="设备存在微信客户端&#xa;且已登录？" vertex="1">
+          <mxGeometry height="110" width="160" x="200" y="304" as="geometry" />
+        </mxCell>
+        <mxCell id="lNp7C3kFQLb2jAcanEqy-2" edge="1" parent="1" source="quick-login-page" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="quick-login-btn">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="quick-login-page" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5f4e6;strokeColor=#27ae60;strokeWidth=2;fontSize=12;fontFamily=Arial;" value="显示快捷登录页面" vertex="1">
+          <mxGeometry height="60" width="140" x="210" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="quick-login-btn" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5f4e6;strokeColor=#27ae60;strokeWidth=2;fontSize=12;fontFamily=Arial;" value="点击快捷登录按钮" vertex="1">
+          <mxGeometry height="60" width="140" x="210" y="580" as="geometry" />
+        </mxCell>
+        <!-- 新增：用户授权节点 -->
+        <mxCell id="user-auth" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontSize=12;fontFamily=Arial;" value="用户授权（申请使用昵称、头像）" vertex="1">
+          <mxGeometry height="60" width="200" x="420" y="660" as="geometry" />
+        </mxCell>
+        <!-- 登录成功下移至 y=780 -->
+        <mxCell id="login-success" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5f4e6;strokeColor=#27ae60;strokeWidth=2;fontSize=12;fontFamily=Arial;" value="登录成功" vertex="1">
+          <mxGeometry height="60" width="140" x="450" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=2;endArrow=classic;endFill=1;" target="qrcode-page" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="qrcode-page" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e74c3c;strokeWidth=2;endArrow=classic;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="qrcode-login" value="并行">
+          <mxGeometry relative="1" x="-0.0017" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="535" y="245" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge3" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3498db;strokeWidth=2;endArrow=classic;endFill=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="request-permission" value="并行">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="150" />
+              <mxPoint x="280" y="200" />
+            </Array>
+            <mxPoint x="420" y="150" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="request-permission" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=light-dark(#347ddb, #c1c1c1);strokeWidth=2;endArrow=classic;endFill=1;" target="permission-check" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" edge="1" parent="1" source="permission-check" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#27ae60;strokeWidth=2;fontSize=12;fontStyle=1;fontFamily=Arial;endArrow=classic;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="quick-login-page" value="是">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" edge="1" parent="1" source="quick-login-page" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#27ae60;strokeWidth=2;endArrow=classic;endFill=1;" target="quick-login-btn" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" edge="1" parent="1" source="permission-check" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e74c3c;strokeWidth=2;fontSize=12;fontStyle=1;fontFamily=Arial;endArrow=classic;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;dashed=1;" value="否">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="359" />
+            </Array>
+            <mxPoint x="520" y="359" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <!-- edge9: quick-login-btn -> user-auth -->
+        <mxCell id="edge9" edge="1" parent="1" source="quick-login-btn" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#27ae60;strokeWidth=2;endArrow=classic;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="user-auth" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- edge10: qrcode-login -> user-auth -->
+        <mxCell id="edge10" edge="1" parent="1" source="qrcode-login" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e74c3c;strokeWidth=2;endArrow=classic;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="user-auth" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- edge11: user-auth -> login-success -->
+        <mxCell id="edge11" edge="1" parent="1" source="user-auth" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d6b656;strokeWidth=2;endArrow=classic;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="login-success" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="29.6.6">
+  <diagram id="weixin-login-roles" name="扫码登录核心角色">
+    <mxGraphModel dx="1042" dy="692" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Eamvza9gPvovANGgnqaa-1" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="160" width="220" x="519" y="221" as="geometry" />
+        </mxCell>
+        <mxCell id="site-icon" parent="Eamvza9gPvovANGgnqaa-1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#3b82f6;fontSize=42;align=center;verticalAlign=middle;" value="🌐" vertex="1">
+          <mxGeometry height="100" width="100" x="60" as="geometry" />
+        </mxCell>
+        <mxCell id="site-title" parent="Eamvza9gPvovANGgnqaa-1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=22;fontStyle=1;fontColor=#1d4ed8;" value="第三方网站应用" vertex="1">
+          <mxGeometry height="40" width="220" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Eamvza9gPvovANGgnqaa-2" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="160" width="220" x="240" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="user-icon" parent="Eamvza9gPvovANGgnqaa-2" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#22c55e;fontSize=42;align=center;verticalAlign=middle;" value="👤" vertex="1">
+          <mxGeometry height="100" width="100" x="60" as="geometry" />
+        </mxCell>
+        <mxCell id="user-title" parent="Eamvza9gPvovANGgnqaa-2" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=22;fontStyle=1;fontColor=#166534;" value="微信用户" vertex="1">
+          <mxGeometry height="40" width="220" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Eamvza9gPvovANGgnqaa-3" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="162" width="256" x="780" y="218" as="geometry" />
+        </mxCell>
+        <mxCell id="wx-icon" parent="Eamvza9gPvovANGgnqaa-3" style="shape=image;verticalLabelPosition=bottom;verticalAlign=top;imageAspect=0;aspect=fixed;image=data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20100%20100%27%3E%3Ccircle%20cx%3D%2750%27%20cy%3D%2750%27%20r%3D%2748%27%20fill%3D%27%2307C160%27/%3E%3Cellipse%20cx%3D%2742%27%20cy%3D%2742%27%20rx%3D%2724%27%20ry%3D%2718%27%20fill%3D%27white%27/%3E%3Cellipse%20cx%3D%2763%27%20cy%3D%2758%27%20rx%3D%2720%27%20ry%3D%2715%27%20fill%3D%27white%27/%3E%3Ccircle%20cx%3D%2734%27%20cy%3D%2740%27%20r%3D%273%27%20fill%3D%27%2307C160%27/%3E%3Ccircle%20cx%3D%2744%27%20cy%3D%2740%27%20r%3D%273%27%20fill%3D%27%2307C160%27/%3E%3Ccircle%20cx%3D%2758%27%20cy%3D%2756%27%20r%3D%272.8%27%20fill%3D%27%2307C160%27/%3E%3Ccircle%20cx%3D%2767%27%20cy%3D%2756%27%20r%3D%272.8%27%20fill%3D%27%2307C160%27/%3E%3C/svg%3E;" value="" vertex="1">
+          <mxGeometry height="100" width="100" x="78" as="geometry" />
+        </mxCell>
+        <mxCell id="wx-title" parent="Eamvza9gPvovANGgnqaa-3" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=20;fontStyle=1;fontColor=#6d28d9;" value="微信开放平台&lt;br&gt;（微信服务器）" vertex="1">
+          <mxGeometry height="44" width="256" y="118" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

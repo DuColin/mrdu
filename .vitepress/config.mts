@@ -4,10 +4,12 @@ export default defineConfig({
     title: "Colin Du's blog",
     description: "A VitePress Site",
     base: "/mrdu/",
+    srcDir: 'docs',
     themeConfig: {
         nav: nav(),
         sidebar: {
             "/article/": sidebarArticle(),
+            "/weixin/": sidebarWeixin(),
             "/note/base/": sidebarBase(),
             "/note/algorithm/": sidebarAlgorithm(),
             "/note/framework/": sidebarFramework(),
@@ -88,6 +90,11 @@ function nav(): DefaultTheme.NavItem[] {
                 },
             ],
         },
+        {
+            text: "微信生态",
+            link: "/weixin/快速上手",
+            activeMatch: "/weixin",
+        },
     ];
 }
 
@@ -119,6 +126,27 @@ function sidebarArticle(): DefaultTheme.SidebarItem[] {
                 },
             ],
         },
+    ];
+}
+
+function sidebarWeixin(): DefaultTheme.SidebarItem[] {
+    return [
+        {
+            text: "微信生态",
+            base: "/weixin/",
+            items: [
+                { text: "快速上手", link: "快速上手" },
+                { text: "微信扫码登录实现", link: "微信扫码登录实现" },
+            ],
+        },
+        {
+            text: "微信小程序",
+            base: "/weixin/wxApp/",
+            items: [
+                { text: "快速上手", link: "快速上手" },
+                { text: "路由", link: "路由" },
+            ],
+        }
     ];
 }
 
@@ -308,15 +336,6 @@ function sidebarMobile(): DefaultTheme.SidebarItem[] {
             base: "/note/mobile/uniapp/",
             collapsed: false,
             items: [{ text: "概述", link: "概述" }],
-        },
-        {
-            text: "小程序",
-            base: "/note/mobile/miniApp/",
-            collapsed: false,
-            items: [
-                { text: "小程序", link: "小程序" },
-                { text: "微信小程序", link: "微信小程序" },
-            ],
         },
     ];
 }
