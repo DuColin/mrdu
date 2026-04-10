@@ -14,6 +14,11 @@
     --vp-custom-block-warning-border: var(--vt-c-yellow);
 }
 
+html, body {
+    /* 防止由于图片/代码块/伪元素尺寸超出导致的页面级横向滚动条 */
+    overflow-x: hidden;
+}
+
 body {
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif!important;
 }
@@ -84,3 +89,38 @@ body {
     z-index: 50;
 }
 
+/************ 首页 Hero 美化 **************/
+.VPHome .VPHero {
+    position: relative;
+    overflow: hidden;
+}
+
+.VPHome .VPHero::before {
+    content: "";
+    position: absolute;
+    inset: -24px 0;
+    background: radial-gradient(60% 50% at 20% 30%, rgba(7, 193, 96, 0.14), transparent 70%),
+                radial-gradient(45% 35% at 80% 20%, rgba(59, 130, 246, 0.12), transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+.VPHome .VPHero .actions .action {
+    transition: all .22s ease;
+    border-radius: 12px;
+}
+
+.VPHome .VPHero .actions .action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(16, 24, 40, .14);
+}
+
+.VPHome .VPHero .actions .action.brand {
+    background: linear-gradient(135deg, #07c160 0%, #08a552 100%);
+    border: none;
+}
+
+.VPHome .VPHero .actions .action.alt {
+    border-color: rgba(31, 41, 55, .18);
+}

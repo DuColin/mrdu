@@ -4,9 +4,15 @@ export default defineConfig({
     title: "Colin Du's blog",
     description: "A VitePress Site",
     base: "/mrdu/",
-    srcDir: 'docs',
+    srcDir: "docs",
     themeConfig: {
-        nav: nav(),
+        nav: [
+            ...nav(),
+            {
+                text: 'AI专题',
+                link: "https://ducolin.github.io/ai-magic/" 
+            }
+        ],
         sidebar: {
             "/article/": sidebarArticle(),
             "/weixin/": sidebarWeixin(),
@@ -92,7 +98,7 @@ function nav(): DefaultTheme.NavItem[] {
         },
         {
             text: "微信生态",
-            link: "/weixin/快速上手",
+            link: "/weixin/生态简介",
             activeMatch: "/weixin",
         },
     ];
@@ -135,7 +141,7 @@ function sidebarWeixin(): DefaultTheme.SidebarItem[] {
             text: "微信生态",
             base: "/weixin/",
             items: [
-                { text: "快速上手", link: "快速上手" },
+                { text: "生态简介", link: "生态简介" },
                 { text: "微信扫码登录实现", link: "微信扫码登录实现" },
             ],
         },
@@ -143,10 +149,48 @@ function sidebarWeixin(): DefaultTheme.SidebarItem[] {
             text: "微信小程序",
             base: "/weixin/wxApp/",
             items: [
-                { text: "快速上手", link: "快速上手" },
-                { text: "路由", link: "路由" },
+                { 
+                    text: "简介", link: "简介" 
+                },
+                {
+                    text: "运行容器",
+                    items: [
+                        {
+                            text: "技术架构",
+                            link: "技术架构"
+                        },
+                        {
+                            text: 'API',
+                            link: 'API'
+                        }
+                    ]
+                },
+                {
+                    text: "技术体系",
+                    items: [
+                        {
+                            text: "开发框架",
+                            link: "开发框架",
+                            items: [
+                                { text: "页面", link: "页面" },
+                                { text: "路由", link: "路由" },
+                                { text: "生命周期", link: "生命周期" },
+                            ],
+                        },
+                        {
+                            text: "后端服务",
+                            items:  [
+
+                            ]
+                        },
+                    ],
+                },
+                {
+                    text: "运营与发布",
+                    items: []
+                }
             ],
-        }
+        },
     ];
 }
 
