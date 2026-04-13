@@ -156,8 +156,8 @@ function sidebarWeixin(): DefaultTheme.SidebarItem[] {
                     text: "运行容器",
                     items: [
                         {
-                            text: "技术架构",
-                            link: "技术架构"
+                            text: "运行架构",
+                            link: "运行架构"
                         },
                         {
                             text: 'API',
@@ -172,6 +172,7 @@ function sidebarWeixin(): DefaultTheme.SidebarItem[] {
                             text: "开发框架",
                             link: "开发框架",
                             items: [
+                                { text: "基础", link: "基础" },
                                 { text: "页面", link: "页面" },
                                 { text: "路由", link: "路由" },
                                 { text: "生命周期", link: "生命周期" },
