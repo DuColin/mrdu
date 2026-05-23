@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.CMFi8ROq.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"ai-code/index.md","filePath":"ai-code/index.md","lastUpdated":1777978720000}'),o={name:"ai-code/index.md"};function d(n,c,r,i,s,p){return a(),t("div")}const f=e(o,[["render",d]]);export{m as __pageData,f as default};

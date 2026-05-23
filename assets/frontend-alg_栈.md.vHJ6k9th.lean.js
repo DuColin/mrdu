@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.CMFi8ROq.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"frontend-alg/栈.md","filePath":"frontend-alg/栈.md","lastUpdated":1779294971000}'),n={name:"frontend-alg/栈.md"};function r(o,s,c,d,p,_){return a(),t("div")}const i=e(n,[["render",r]]);export{l as __pageData,i as default};

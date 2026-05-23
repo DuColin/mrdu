@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as a}from"./chunks/framework.CMFi8ROq.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"ai-guide/prompt.md","filePath":"ai-guide/prompt.md","lastUpdated":1777978720000}'),r={name:"ai-guide/prompt.md"};function o(p,s,i,c,d,n){return a(),e("div")}const f=t(r,[["render",o]]);export{_ as __pageData,f as default};
