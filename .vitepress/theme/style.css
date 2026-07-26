@@ -24,7 +24,7 @@ body {
 }
 
 
-/************** 页面样式 *************/
+/************** 文档样式 *************/
 .vp-doc h3 {
     font-size: 22px!important;
 }
@@ -35,6 +35,17 @@ body {
 
 .vp-doc h5 {
     font-size: 18px!important;
+}
+
+/* 选择：紧跟在 h5 后面的 h6 */
+.vp-doc h3 + h5 {
+  margin-top: 16px !important;
+}
+.vp-doc h3 + h6 {
+  margin-top: 16px !important;
+}
+.vp-doc h5 + h6 {
+  margin-top: 16px !important;
 }
 
 /************** 导航栏样式 *************/
@@ -69,6 +80,11 @@ body {
 /******* 无序列表样式 ********/
 .vp-doc ul li::marker {
     color:  var(--vt-c-text-light-3);
+}
+
+/******* 有序列表样式 ********/
+ol li:has(> p > strong:only-child)::marker {
+  font-weight: bold;
 }
 
 /********* 提示样式 *********/

@@ -1,5 +1,4 @@
 import { defineConfig, type DefaultTheme } from "vitepress";
-// import mathjax from 'markdown-it-mathjax3';
 
 export default defineConfig({
     title: "Colin Du's blog",
@@ -11,14 +10,16 @@ export default defineConfig({
         sidebar: {
             "/article/": sidebarArticle(),
             "/weixin/": sidebarWeixin(),
+            "/base-language/": sidebarBaseLanguage(),
+            "/base-alg/": sidebarAlg(),
+            '/base-computer/': sidebarComputer(),
             "/frontend-base/": sidebarBase(),
             "/frontend-framework/": sidebarFramework(),
             "/frontend-engineering/": sidebarEngineering(),
-            "/frontend-alg": sidebarAlg(),
-            "/frontend/mobile": sidebarMobile(),
-            "/frontend/server": sidebarServer(),
+            "/frontend-mobile/": sidebarMobile(),
             "/frontend/optimize": sidebarOptimize(),
             "/frontend/secure": sidebarSecure(),
+            "/server-node/": sidebarServer(),
             "/ai-guide/": sidebarGuide(),
             "/business-plm": sidebarPLM(),
         },
@@ -40,15 +41,16 @@ export default defineConfig({
             message: "基于 MIT 许可发布",
             copyright: `版权所有 © 2019-${new Date().getFullYear()} 杜聪聪`,
         },
+        search: {
+            provider: 'local'
+        }
     },
     markdown: {
         theme: {
             light: "github-light",
             dark: "github-dark",
         },
-        // config: (md) => {
-        //     md.use(mathjax);
-        // },
+        math: true
     },
 });
 
@@ -60,11 +62,28 @@ function nav(): DefaultTheme.NavItem[] {
             activeMatch: "/weixin",
         },
         {
+            text: "基础",
+            items: [
+                {
+                    text: "语言",
+                    link: "/base-language/typescript/快速上手",
+                },
+                {
+                    text: "算法",
+                    link: "/base-alg/单向链表",
+                },
+                {
+                    text: "计算机",
+                    link: "/base-computer/network/http",
+                }
+            ]
+        },
+        {
             text: "前端",
             items: [
                 {
                     text: "基础",
-                    link: "/frontend-base/typescript/快速上手",
+                    link: "/frontend-base/node/进程模型",
                 },
                 {
                     text: "框架",
@@ -75,16 +94,8 @@ function nav(): DefaultTheme.NavItem[] {
                     link: "/frontend-engineering/概述",
                 },
                 {
-                    text: "算法",
-                    link: "/frontend-alg/单向链表",
-                },
-                {
                     text: "移动端",
-                    link: "/frontend/mobile/移动端开发技术路线",
-                },
-                {
-                    text: "服务端",
-                    link: "/frontend/server/node服务端开发",
+                    link: "/frontend-mobile/移动端开发技术路线",
                 },
                 {
                     text: "优化",
@@ -95,6 +106,15 @@ function nav(): DefaultTheme.NavItem[] {
                     link: "/frontend/secure/非对称加密",
                 },
             ],
+        },
+        {
+            text: "服务端",
+            items: [
+                {
+                    text: "node",
+                    link: "/server-node/服务端开发",
+                },
+            ]
         },
         {
             text: "AI",
@@ -196,11 +216,12 @@ function sidebarWeixin(): DefaultTheme.SidebarItem[] {
     ];
 }
 
-function sidebarBase(): DefaultTheme.SidebarItem[] {
+
+function sidebarBaseLanguage(): DefaultTheme.SidebarItem[] {
     return [
         {
             text: "TypeScript",
-            base: "/frontend-base/typescript/",
+            base: "/base-language/typescript/",
             collapsed: false,
             items: [
                 { text: "快速上手", link: "快速上手" },
@@ -230,6 +251,20 @@ function sidebarBase(): DefaultTheme.SidebarItem[] {
             ],
         },
         {
+            text: "JavaScript",
+            base: "/base-language/javascript/",
+            collapsed: false,
+            items: [
+                { text: "模块系统", link: "模块系统" },
+                { text: "运算符", link: "运算符" }
+            ],
+        },
+    ];
+}
+
+function sidebarBase(): DefaultTheme.SidebarItem[] {
+    return [
+        {
             text: "node",
             base: "/frontend-base/node/",
             collapsed: false,
@@ -249,30 +284,10 @@ function sidebarBase(): DefaultTheme.SidebarItem[] {
             base: "/frontend-base/npm/",
             collapsed: false,
             items: [{ text: "package.json详解", link: "package" }],
-        },
-        {
-            text: "浏览器",
-            base: "/frontend-base/browser/",
-            collapsed: false,
-            items: [
-                { text: "浏览器中的存储", link: "浏览器中的存储" },
-                { text: "shadow DOM", link: "shadowDOM" },
-            ],
-        },
-        {
-            text: "JavaScript",
-            base: "/frontend-base/javascript/",
-            collapsed: false,
-            items: [{ text: "模块系统", link: "模块系统" }],
-        },
-        {
-            text: "网络",
-            base: "/frontend-base/network/",
-            collapsed: false,
-            items: [{ text: "http缓存机制", link: "http缓存机制" }],
-        },
+        }
     ];
 }
+
 
 function sidebarFramework(): DefaultTheme.SidebarItem[] {
     return [
@@ -383,11 +398,53 @@ function sidebarEngineering(): DefaultTheme.SidebarItem[] {
 function sidebarAlg(): DefaultTheme.SidebarItem[] {
     return [
         {
+            text: "数据结构",
+            base: "/base-alg/",
+            items: [
+                { text: "单向链表", link: "单向链表" },
+                { text: "哈希表", link: "哈希表" },
+                { text: "堆/栈/队列", link: "堆_栈_队列" },
+                { text: "字符串", link: "字符串" },
+            ],
+        },
+        {
             text: "算法",
-            base: "/frontend-alg/",
+            base: "/base-alg/",
+            items: [
+                { text: "二分法", link: "二分法" },
+                { text: "动态规划法", link: "动态规划法" },
+                { text: "贪心算法", link: "贪心算法" }
+            ],
+        },
+        {
+            text: "经验",
+            base: "/base-alg/",
+            items: [
+                { text: "解题经验", link: "解题经验" }
+            ],
+        }
+
+    ];
+}
+
+function sidebarComputer(): DefaultTheme.SidebarItem[] {
+    return [
+        {
+            text: "浏览器",
+            base: "/base-computer/browser/",
             collapsed: false,
             items: [
-                { text: "单向链表", link: "单向链表" }
+                { text: "浏览器中的存储", link: "浏览器中的存储" },
+                { text: "shadow DOM", link: "shadowDOM" },
+            ],
+        },
+        {
+            text: "网络",
+            base: "/base-computer/network/",
+            collapsed: false,
+            items: [
+                { text: "http", link: "http" },
+                { text: "https", link: "https" },
             ],
         },
     ];
@@ -397,13 +454,13 @@ function sidebarMobile(): DefaultTheme.SidebarItem[] {
     return [
         {
             text: "移动端",
-            base: "/frontend/mobile/",
+            base: "/frontend-mobile/",
             collapsed: false,
             items: [{ text: "移动端开发技术路线", link: "移动端开发技术路线" }],
         },
         {
             text: "uni app",
-            base: "/frontend/mobile/uniapp/",
+            base: "/frontend-mobile/uniapp/",
             collapsed: false,
             items: [{ text: "概述", link: "概述" }],
         },
