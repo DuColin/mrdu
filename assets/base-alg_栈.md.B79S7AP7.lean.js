@@ -1,0 +1,1 @@
+import{_ as e,c as a,o as t}from"./chunks/framework.C6KiNYey.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"base-alg/栈.md","filePath":"base-alg/栈.md","lastUpdated":1785053693000}'),s={name:"base-alg/栈.md"};function r(o,c,n,d,p,_){return t(),a("div")}const m=e(s,[["render",r]]);export{i as __pageData,m as default};
