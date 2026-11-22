@@ -21,10 +21,23 @@ html, body {
 
 body {
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif!important;
+    font-size: 14px;
+    line-height: 22px;
 }
 
 
 /************** 文档样式 *************/
+/* 正文默认字号/行高（VitePress 默认 16px/1.7，需覆盖 .vp-doc 自身的设定） */
+.vp-doc {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+/* 段落行高：显式覆盖，防止继承不到或被其他规则抢先 */
+.vp-doc p {
+    line-height: 22px;
+}
+
 .vp-doc h3 {
     font-size: 22px!important;
 }

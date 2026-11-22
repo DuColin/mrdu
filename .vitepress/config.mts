@@ -126,7 +126,7 @@ function nav(): DefaultTheme.NavItem[] {
             ],
         },
         {
-            text: "业务",
+            text: "商业",
             items: [
                 {
                     text: "PLM",
@@ -255,8 +255,19 @@ function sidebarBaseLanguage(): DefaultTheme.SidebarItem[] {
             base: "/base-language/javascript/",
             collapsed: false,
             items: [
-                { text: "模块系统", link: "模块系统" },
-                { text: "运算符", link: "运算符" }
+                { text: "类型", link: "类型" },
+                {
+                    text: "面向对象",
+                    items: [{ text: "对象", link: "对象" }],
+                },
+                {
+                    text: "数据结构",
+                    items: [
+                        { text: "数据结构", link: "数据结构" },
+                        { text: "类型和运算", link: "类型和运算" },
+                    ],
+                },
+                { text: "模块系统", link: "模块系统" }
             ],
         },
     ];
@@ -402,6 +413,7 @@ function sidebarAlg(): DefaultTheme.SidebarItem[] {
             base: "/base-alg/",
             items: [
                 { text: "单向链表", link: "单向链表" },
+                { text: "双向链表", link: "双向链表" },
                 { text: "哈希表", link: "哈希表" },
                 { text: "堆/栈/队列", link: "堆_栈_队列" },
                 { text: "字符串", link: "字符串" },
@@ -413,13 +425,24 @@ function sidebarAlg(): DefaultTheme.SidebarItem[] {
             items: [
                 { text: "二分法", link: "二分法" },
                 { text: "动态规划法", link: "动态规划法" },
-                { text: "贪心算法", link: "贪心算法" }
+                { text: "贪心算法", link: "贪心算法" },
+                { text: "回溯法", link: "回溯法" },
+                { text: "分治法", link: "分治法" }
             ],
         },
         {
-            text: "经验",
+            text: "经典问题",
             base: "/base-alg/",
             items: [
+                { text: "背包问题", link: "背包问题" },
+            ],
+        },
+        {
+            text: "总结",
+            base: "/base-alg/",
+            items: [
+                { text: "算法总结", link: "算法总结" },
+                { text: "特殊题型", link: "特殊题型" },
                 { text: "解题经验", link: "解题经验" }
             ],
         }
